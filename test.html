@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <title>Homework 2</title>
 </head>
+<style>
+    .gray {
+        color: gray;
+    }
+    .blue {
+        color: cornflowerblue;
+    }
+</style>
 <body>
 
+<div id="test_element">
+    <div id="first_child">
+        <h1 class="gray"> This is the first child </h1>
+        <a id ="google_link" href="http://google.com">Go to google</a>
+        <br>
+        <br>
+        <button id="toggleGray">
+            Toggle Gray
+        </button>
+        <button id="addBlue">
+            Add Blue
+        </button>
+    </div>
+    <div id="second_child">
+        <h4 id="description">
+            This a description that can be faded
+        </h4>
+        <button id="fade_button">Toggle Fade</button>
+    </div>
+</div>
+
+<script src="index.js">
+    // get the elements
+    let testElement = document.getElementById('test_element')
+    let link = document.getElementById('google_link')
+    let toggleGray = document.getElementById('toggleGray')
+    let addBlue = document.getElementById('addBlue')
+
+    // instantiate Min Jquery for elements
+    let testElementJQ = new MinjQuery(testElement)
+    let linkJQ = new MinjQuery(link)
+    let toggleGrayJQ = new MinjQuery(toggleGray)
+    let addBlueJQ = new MinjQuery(addBlue)
 
 
-<script src="index.js"></script>
+
+</script>
 </body>
 </html>
