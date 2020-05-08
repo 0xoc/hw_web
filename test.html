@@ -17,6 +17,7 @@
 <div id="test_element">
     <div id="first_child">
         <h1 id="title"> This is the first child </h1>
+
         <a id ="google_link" href="http://google.com">Go to google</a>
         <br>
         <br>
@@ -55,12 +56,22 @@
 
     // add blue class
     function addBlueFunction() {
-        console.log(titleJQ.hasClass('blue'))
+        //add blue
         titleJQ.addClass('blue')
-        console.log(titleJQ.attr('class'))
-        console.log(titleJQ.hasClass('blue'))
     }
     addBlueJQ.click(addBlueFunction);
+
+    // toggle gray
+    function toggleGrayFunction() {
+        // remove blue
+        if (titleJQ.hasClass('blue'))
+            titleJQ.toggleClass('blue')
+
+        // toggle gray now
+        titleJQ.toggleClass('gray');
+    }
+
+    toggleGrayJQ.click(toggleGrayFunction);
 
 </script>
 </body>

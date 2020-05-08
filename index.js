@@ -35,12 +35,12 @@ class MinjQuery {
     hasClass(className) {
         // if element has class
 
-        let allClasses = this.attr('class')
+        let allClasses = this.attr('class');
 
         if (allClasses == null)
-            return false
+            return false;
 
-        return allClasses.split().includes(className)
+        return allClasses.split().includes(className);
     }
 
     hover(callback) {
@@ -49,9 +49,11 @@ class MinjQuery {
 
     removeAttr(attrName) {
         // remove attr
+        this.element.removeAttribute(attrName);
     }
 
     toggleClass(className) {
         // toggle class
+        this.element.classList.toggle(className);
     }
 }
