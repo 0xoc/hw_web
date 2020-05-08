@@ -33,7 +33,14 @@ class MinjQuery {
     }
 
     hasClass(className) {
-        // Determine whether passed element has given class
+        // if element has class
+
+        let allClasses = this.attr('class')
+
+        if (allClasses == null)
+            return false
+
+        return allClasses.split().includes(className)
     }
 
     hover(callback) {

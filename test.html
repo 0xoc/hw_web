@@ -55,8 +55,10 @@
 
     // add blue class
     function addBlueFunction() {
+        console.log(titleJQ.hasClass('blue'))
         titleJQ.addClass('blue')
         console.log(titleJQ.attr('class'))
+        console.log(titleJQ.hasClass('blue'))
     }
     addBlueJQ.click(addBlueFunction);
 
