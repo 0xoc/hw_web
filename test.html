@@ -36,6 +36,8 @@
     </div>
 
     <h2 id="hover">Hover Over This</h2>
+
+    <button id="destroy">Destroy Everything</button>
 </div>
 
 <script src="index.js">
@@ -52,6 +54,7 @@
     let toggleGray = document.getElementById('toggleGray');
     let addBlue = document.getElementById('addBlue');
     let hover = document.getElementById('hover');
+    let destroy = document.getElementById('destroy');
 
     // instantiate Min Jquery for elements
     let testElementJQ = new MinjQuery(testElement);
@@ -60,6 +63,10 @@
     let toggleGrayJQ = new MinjQuery(toggleGray);
     let addBlueJQ = new MinjQuery(addBlue);
     let hoverJQ = new MinjQuery(hover);
+    let destroyJQ = new MinjQuery(destroy);
+
+    // print all test element child nodes
+    console.log(testElementJQ.children())
 
     // set hover times
     function hoverCount() {
@@ -88,6 +95,13 @@
 
     toggleGrayJQ.click(toggleGrayFunction);
 
+
+    // destroy
+    function destroyFunction() {
+        testElementJQ.empty()
+    }
+
+    destroyJQ.click(destroyFunction);
 </script>
 </body>
 </html>

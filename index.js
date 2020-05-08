@@ -3,6 +3,7 @@ class MinjQuery {
 
     constructor(element) {
         this.element = element;
+        this.visibale = true;
     }
 
     addClass(className) {
@@ -16,16 +17,17 @@ class MinjQuery {
 
     children() {
         // return a list of children of the element
+        return this.element.childNodes
     }
 
     click(callback) {
         // set on click listener with callback
         this.element.onclick = callback;
-        console.log("added")
     }
 
     empty() {
         // remove all children
+        this.element.innerHTML = '';
     }
 
     fadeToggle(duration) {
