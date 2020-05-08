@@ -11,6 +11,7 @@ class MinjQuery {
 
     attr(attrName) {
         // get attr value of the element
+        return this.element.getAttribute(attrName)
     }
 
     children() {
