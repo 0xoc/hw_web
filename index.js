@@ -1,13 +1,16 @@
 class MinjQuery {
+
+
     constructor(element) {
+        this.element = element;
     }
 
     addClass(className) {
-        // add call to element
+        this.element.classList.add(className)
     }
 
     attr(attrName) {
-        // get attr value of the elemnt
+        // get attr value of the element
     }
 
     children() {
@@ -16,6 +19,8 @@ class MinjQuery {
 
     click(callback) {
         // set on click listener with callback
+        this.element.onclick = callback;
+        console.log("added")
     }
 
     empty() {

@@ -16,7 +16,7 @@
 
 <div id="test_element">
     <div id="first_child">
-        <h1 class="gray"> This is the first child </h1>
+        <h1 id="title"> This is the first child </h1>
         <a id ="google_link" href="http://google.com">Go to google</a>
         <br>
         <br>
@@ -36,20 +36,28 @@
 </div>
 
 <script src="index.js">
+</script>
+
+<script>
     // get the elements
-    let testElement = document.getElementById('test_element')
-    let link = document.getElementById('google_link')
-    let toggleGray = document.getElementById('toggleGray')
-    let addBlue = document.getElementById('addBlue')
+    let title = document.getElementById('title');
+    let testElement = document.getElementById('test_element');
+    let link = document.getElementById('google_link');
+    let toggleGray = document.getElementById('toggleGray');
+    let addBlue = document.getElementById('addBlue');
 
     // instantiate Min Jquery for elements
-    let testElementJQ = new MinjQuery(testElement)
-    let linkJQ = new MinjQuery(link)
-    let toggleGrayJQ = new MinjQuery(toggleGray)
-    let addBlueJQ = new MinjQuery(addBlue)
+    let testElementJQ = new MinjQuery(testElement);
+    let titleJQ = new MinjQuery(title);
+    let linkJQ = new MinjQuery(link);
+    let toggleGrayJQ = new MinjQuery(toggleGray);
+    let addBlueJQ = new MinjQuery(addBlue);
 
-
-
+    // add blue class
+    function addBlueFunction() {
+        titleJQ.addClass('blue')
+    }
+    addBlueJQ.click(addBlueFunction);
 </script>
 </body>
 </html>
