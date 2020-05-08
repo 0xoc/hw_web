@@ -44,7 +44,10 @@ class MinjQuery {
     }
 
     hover(callback) {
-        // hover call back
+        // hover class back
+
+        this.element.onmouseover = callback;
+
     }
 
     removeAttr(attrName) {

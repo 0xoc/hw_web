@@ -34,18 +34,24 @@
         </h4>
         <button id="fade_button">Toggle Fade</button>
     </div>
+
+    <h2 id="hover">Hover Over This</h2>
 </div>
 
 <script src="index.js">
 </script>
 
 <script>
+
+    let hoverTimes = 0;
+
     // get the elements
     let title = document.getElementById('title');
     let testElement = document.getElementById('test_element');
     let link = document.getElementById('google_link');
     let toggleGray = document.getElementById('toggleGray');
     let addBlue = document.getElementById('addBlue');
+    let hover = document.getElementById('hover');
 
     // instantiate Min Jquery for elements
     let testElementJQ = new MinjQuery(testElement);
@@ -53,6 +59,15 @@
     let linkJQ = new MinjQuery(link);
     let toggleGrayJQ = new MinjQuery(toggleGray);
     let addBlueJQ = new MinjQuery(addBlue);
+    let hoverJQ = new MinjQuery(hover);
+
+    // set hover times
+    function hoverCount() {
+        hoverTimes++;
+        hover.innerText = `You Hovered Over This ${hoverTimes} time(s)`;
+    }
+
+    hoverJQ.hover(hoverCount);
 
     // add blue class
     function addBlueFunction() {
